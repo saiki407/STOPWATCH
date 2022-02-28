@@ -27,7 +27,7 @@ display.innerHTML = hours+":"+minutes+":"+seconds;
 
 start.addEventListener("click",function(){
 status == "stop"
-interval = setInterval(stopWatch,100)
+interval = setInterval(stopWatch,1000)
 status = "start" ;
 })
 
@@ -37,8 +37,9 @@ stop.addEventListener("click",function(){
 })
 
 reset.addEventListener("click",function(){
+clearInterval(interval)
 display.innerHTML = "00:00:00";
-hours:0;
-minutes:0;
-seconds:0;
+hours = 0;
+minutes = 0;
+seconds = 0;
 })
